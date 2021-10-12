@@ -1,4 +1,4 @@
-# Google Form Automation For SMKTPD school
+# Google Form Automation For SMKTPD School
 
 To solve the problem that I need to fill up the google form for kehadiran that is quite annoying daily.
 
