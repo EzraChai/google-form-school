@@ -3,7 +3,7 @@ const prompt = require("prompt-sync")({ sigint: true });
 
 
 //  Change your name and class here
-let fullName = "CHAI JUAN ZHE"
+let fullName = ""
 let currentClass = "4 BAIDURI"
 let currentForm = "TINGKATAN 4"
 
