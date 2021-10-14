@@ -113,5 +113,5 @@ if(subject === "BAHASA MELAYU" ||  subject === "BAHASA CINA" || subject === "BAH
         }
     }
 }else {
-    console.error("Subject not valid: ", subject);
+    console.error(`Opps! your subject: ${subject}is not a valid subject`);
 }
