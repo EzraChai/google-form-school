@@ -1,7 +1,7 @@
 const puppeteer = require('puppeteer');
 
 //  Change Here
-let subject = "FIZIK"
+let subject = "Bahasa melayu"
 let fullName = "CHAI JUAN ZHE"
 let currentClass = "4 BAIDURI"
 
@@ -21,7 +21,7 @@ if(subject === "BAHASA MELAYU" ||  subject === "BAHASA CINA" || subject === "BAH
     async function fill(subject, fullName, currentClass, submitForm) {
 
         try {
-            const browser  = await puppeteer.launch({ headless: false, args: ['--no-sandbox'],});
+        const browser  = await puppeteer.launch({ headless: true, args: ['--no-sandbox'],});
         const page = await browser.newPage();
         await page.goto("https://docs.google.com/forms/d/e/1FAIpQLSeRpuWL1hTLilGH2E5Bz39BuQcZ9qCTHBBauwfmVFkWsok0QA/viewform", {waitUntil: 'networkidle2'})
         const title = await page.$eval("title", el => el.textContent);
@@ -50,7 +50,7 @@ if(subject === "BAHASA MELAYU" ||  subject === "BAHASA CINA" || subject === "BAH
 
         await page.waitForTimeout(400);
         await page.click('.quantumWizMenuPaperselectOption.appsMaterialWizMenuPaperselectOption.freebirdThemedSelectOptionDarkerDisabled.exportOption.isSelected.isPlaceholder');
-        await page.waitForTimeout(400);
+        await page.waitForTimeout(500);
         await page.click('.exportSelectPopup.quantumWizMenuPaperselectPopup.appsMaterialWizMenuPaperselectPopup>.quantumWizMenuPaperselectOption.appsMaterialWizMenuPaperselectOption.freebirdThemedSelectOptionDarkerDisabled.exportOption[data-value="'+ subject.toUpperCase() +'"]');
         console.log(`Subject : ${subject}`)
         await page.waitForTimeout(600);
@@ -102,8 +102,8 @@ if(subject === "BAHASA MELAYU" ||  subject === "BAHASA CINA" || subject === "BAH
                 console.log("");
             }
         }
-        // await page.close();
-        // await browser.close();
+         await page.close();
+         await browser.close();
 
         } catch (error) {
             console.error(error.message);
