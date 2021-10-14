@@ -24,4 +24,5 @@ npm start
 ```
 
 6. Enter your current subject
-7. HAVE FUN !!
+7. The date, subject,form, class, subject will be showing in the terminal
+8. HAVE FUN !!
