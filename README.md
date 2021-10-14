@@ -24,6 +24,6 @@ npm start
 ```
 
 6. Enter your current subject
-7. The date, subject,form, class, subject will be showing in the terminal
+7. The date, subject, form, class, your beautiful name will be showing in the terminal
 8. If any error occur, run the command again (most probably your network is slow)
 8. HAVE FUN !!
