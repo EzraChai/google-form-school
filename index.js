@@ -2,7 +2,7 @@ const puppeteer = require('puppeteer');
 const prompt = require("prompt-sync")({ sigint: true });
 
 
-//  Change here
+//  Change your name and class here
 let fullName = "CHAI JUAN ZHE"
 let currentClass = "4 BAIDURI"
 
