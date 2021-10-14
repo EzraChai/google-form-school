@@ -1,13 +1,17 @@
 const puppeteer = require('puppeteer');
+const prompt = require("prompt-sync")({ sigint: true });
 
-//  Change Here
-let subject = "Bahasa melayu"
+
+//  Change here
 let fullName = "CHAI JUAN ZHE"
 let currentClass = "4 BAIDURI"
 
 
 
-//  ---------------------------------------------------------------------------------------------------------------
+
+//  --------------------------------------------------------------------------------------------------------------
+
+let subject = prompt("What is your current subject? ");
 
 subject = subject.toUpperCase()
 fullName = fullName.toUpperCase()
@@ -16,7 +20,6 @@ currentClass = currentClass.toUpperCase()
 if(subject === "BAHASA MELAYU" ||  subject === "BAHASA CINA" || subject === "BAHASA INGGERIS" || subject === "BIOLOGI" || subject === "FIZIK" || subject === "KIMIA" || subject === "BAHASA JEPUN" || subject === "BAHASA TAMIL" || subject === "KESUSASTERAAN BAHASA TAMIL"  || subject === "MATEMATIK"  || subject === "MATEMATIK TAMBAHAN"  || subject === "PENDIDIKAN JASMANI & KESIHATAN"  || subject === "PENDIDIKAN MORAL" || subject === "PRINSIP PERAKAUNAN"  || subject === "SAINS"  || subject === "SAINS KOMPUTER"  || subject === "SEJARAH" ){
 
     fill(subject, fullName, currentClass, true)
-
 
     async function fill(subject, fullName, currentClass, submitForm) {
 
