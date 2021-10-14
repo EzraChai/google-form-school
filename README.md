@@ -1,7 +1,7 @@
 # Google Form Automation For SMKTPD School
 
 ### Why I made this?
-To solve the problem where I need to fill up the google form daily for kehadiran which is quite annoying.
+To solve the problem where I need to fill up the google form daily for the kehadiran which is quite annoying.
 
 ### How to use?
 Make sure that you install the Node.js.
