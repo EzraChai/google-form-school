@@ -5,23 +5,29 @@ const prompt = require("prompt-sync")({ sigint: true });
 //  Change your name and class here
 let fullName = "CHAI JUAN ZHE"
 let currentClass = "4 BAIDURI"
+let currentForm = "TINGKATAN 4"
 
 
 
 
 //  --------------------------------------------------------------------------------------------------------------
 
-let subject = prompt("What is your current subject? ");
+let subject = prompt("What is your current subject (in Malay) ?  ");
 
-subject = subject.toUpperCase()
+subject = subject.toUpperCase().trim()
 fullName = fullName.toUpperCase()
 currentClass = currentClass.toUpperCase()
+currentForm = currentForm.toUpperCase()
 
 if(subject === "BAHASA MELAYU" ||  subject === "BAHASA CINA" || subject === "BAHASA INGGERIS" || subject === "BIOLOGI" || subject === "FIZIK" || subject === "KIMIA" || subject === "BAHASA JEPUN" || subject === "BAHASA TAMIL" || subject === "KESUSASTERAAN BAHASA TAMIL"  || subject === "MATEMATIK"  || subject === "MATEMATIK TAMBAHAN"  || subject === "PENDIDIKAN JASMANI & KESIHATAN"  || subject === "PENDIDIKAN MORAL" || subject === "PRINSIP PERAKAUNAN"  || subject === "SAINS"  || subject === "SAINS KOMPUTER"  || subject === "SEJARAH" ){
 
     fill(subject, fullName, currentClass, true)
 
     async function fill(subject, fullName, currentClass, submitForm) {
+        console.log("")
+        console.log("----------------------------------------------")
+        console.log("")
+        console.log("Loading...")
 
         try {
         const browser  = await puppeteer.launch({ headless: true, args: ['--no-sandbox'],});
@@ -54,12 +60,12 @@ if(subject === "BAHASA MELAYU" ||  subject === "BAHASA CINA" || subject === "BAH
         await page.waitForTimeout(400);
         await page.click('.quantumWizMenuPaperselectOption.appsMaterialWizMenuPaperselectOption.freebirdThemedSelectOptionDarkerDisabled.exportOption.isSelected.isPlaceholder');
         await page.waitForTimeout(500);
-        await page.click('.exportSelectPopup.quantumWizMenuPaperselectPopup.appsMaterialWizMenuPaperselectPopup>.quantumWizMenuPaperselectOption.appsMaterialWizMenuPaperselectOption.freebirdThemedSelectOptionDarkerDisabled.exportOption[data-value="'+ subject.toUpperCase() +'"]');
+        await page.click('.exportSelectPopup.quantumWizMenuPaperselectPopup.appsMaterialWizMenuPaperselectPopup>.quantumWizMenuPaperselectOption.appsMaterialWizMenuPaperselectOption.freebirdThemedSelectOptionDarkerDisabled.exportOption[data-value="'+ subject +'"]');
         console.log(`Subject : ${subject}`)
         await page.waitForTimeout(600);
         await page.click('.quantumWizMenuPaperselectOption.appsMaterialWizMenuPaperselectOption.freebirdThemedSelectOptionDarkerDisabled.exportOption.isSelected.isPlaceholder');
         await page.waitForTimeout(400);
-        await page.click('.exportSelectPopup.quantumWizMenuPaperselectPopup.appsMaterialWizMenuPaperselectPopup>.quantumWizMenuPaperselectOption.appsMaterialWizMenuPaperselectOption.freebirdThemedSelectOptionDarkerDisabled.exportOption[data-value="TINGKATAN 4"]');
+        await page.click('.exportSelectPopup.quantumWizMenuPaperselectPopup.appsMaterialWizMenuPaperselectPopup>.quantumWizMenuPaperselectOption.appsMaterialWizMenuPaperselectOption.freebirdThemedSelectOptionDarkerDisabled.exportOption[data-value="'+ currentForm +'"]');
         console.log(`Form : TINGKATAN 4`)
         await page.waitForTimeout(600);
         const selector = await page.$$('.appsMaterialWizButtonPaperbuttonFocusOverlay.exportOverlay');
@@ -72,7 +78,7 @@ if(subject === "BAHASA MELAYU" ||  subject === "BAHASA CINA" || subject === "BAH
         await page.waitForNavigation();
         await page.click('.quantumWizMenuPaperselectOption.appsMaterialWizMenuPaperselectOption.freebirdThemedSelectOptionDarkerDisabled.exportOption.isSelected.isPlaceholder');
         await page.waitForTimeout(400);
-        await page.click('.exportSelectPopup.quantumWizMenuPaperselectPopup.appsMaterialWizMenuPaperselectPopup>.quantumWizMenuPaperselectOption.appsMaterialWizMenuPaperselectOption.freebirdThemedSelectOptionDarkerDisabled.exportOption[data-value="'+ currentClass.toUpperCase() +'"]');
+        await page.click('.exportSelectPopup.quantumWizMenuPaperselectPopup.appsMaterialWizMenuPaperselectPopup>.quantumWizMenuPaperselectOption.appsMaterialWizMenuPaperselectOption.freebirdThemedSelectOptionDarkerDisabled.exportOption[data-value="'+ currentClass +'"]');
         await page.waitForTimeout(500);
         console.log(`Class : ${currentClass}`);
         const selector2 = await page.$$('.appsMaterialWizButtonPaperbuttonFocusOverlay.exportOverlay');

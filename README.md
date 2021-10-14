@@ -7,8 +7,8 @@ To solve the problem where I need to fill up the google form daily for the kehad
 Make sure that you install the Node.js.
 If not, install the Node.js at https://nodejs.org/en/
 
-1. Open your terminal (be like a hacker)
-2. Clone this repository or download the zip( unzip it ) to your own computer
+1. Open your terminal (like a hacker)
+2. Clone this repository or download the zip (unzip it) to your own computer
 3. Go into this directory
 3. Run this commmand (it may take longer than your expected)
 
