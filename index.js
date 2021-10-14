@@ -9,7 +9,6 @@ let currentForm = "TINGKATAN 4"
 
 
 
-
 //  --------------------------------------------------------------------------------------------------------------
 
 let subject = prompt("What is your current subject (in Malay) ?  ");
