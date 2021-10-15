@@ -3,7 +3,7 @@ const prompt = require("prompt-sync")({ sigint: true });
 
 
 //  Change your name and class here
-let fullName = ""
+let fullName = "CHAI JUAN ZHE"
 let currentClass = "4 BAIDURI"
 let currentForm = "TINGKATAN 4"
 
@@ -30,7 +30,7 @@ if(subject === "BAHASA MELAYU" ||  subject === "BAHASA CINA" || subject === "BAH
         console.log("Loading...")
 
         try {
-        const browser  = await puppeteer.launch({ headless: true, args: ['--no-sandbox'],});
+        const browser  = await puppeteer.launch({ headless: false, args: ['--no-sandbox'],});
         const page = await browser.newPage();
         await page.goto("https://docs.google.com/forms/d/e/1FAIpQLSeRpuWL1hTLilGH2E5Bz39BuQcZ9qCTHBBauwfmVFkWsok0QA/viewform", {waitUntil: 'networkidle2'})
         const title = await page.$eval("title", el => el.textContent);
