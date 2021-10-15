@@ -3,9 +3,9 @@ const prompt = require("prompt-sync")({ sigint: true });
 
 
 //  Change your name and class here
-let fullName = "CHAI JUAN ZHE"
-let currentClass = "4 BAIDURI"
-let currentForm = "TINGKATAN 4"
+let fullName = "CHAI JUAN ZHE";
+let currentClass = "4 BAIDURI";
+let currentForm = "TINGKATAN 4";
 
 
 
@@ -13,10 +13,10 @@ let currentForm = "TINGKATAN 4"
 
 let subject = prompt("What is your current subject (in Malay or in shortform) ?  ");
 
-subject = subject.toUpperCase().trim()
-fullName = fullName.toUpperCase()
-currentClass = currentClass.toUpperCase()
-currentForm = currentForm.toUpperCase()
+subject = subject.toUpperCase().trim();
+fullName = fullName.toUpperCase();
+currentClass = currentClass.toUpperCase();
+currentForm = currentForm.toUpperCase();
 
 switch (subject){
     case "BC":
@@ -69,16 +69,16 @@ switch (subject){
         break;
 }
 
-if(subject === "PENDIDIKAN JASMANI" || subject === "JASMANI" ) subject = "PENDIDIKAN JASMANI & KESIHATAN"
+if(subject === "PENDIDIKAN JASMANI" || subject === "JASMANI" ) subject = "PENDIDIKAN JASMANI & KESIHATAN";
 if(subject === "BAHASA MELAYU" ||  subject === "BAHASA CINA" || subject === "BAHASA INGGERIS" || subject === "BIOLOGI" || subject === "FIZIK" || subject === "KIMIA" || subject === "BAHASA JEPUN" || subject === "BAHASA TAMIL" || subject === "KESUSASTERAAN BAHASA TAMIL"  || subject === "MATEMATIK"  || subject === "MATEMATIK TAMBAHAN"  || subject === "PENDIDIKAN JASMANI & KESIHATAN"  || subject === "PENDIDIKAN MORAL" || subject === "PRINSIP PERAKAUNAN"  || subject === "SAINS"  || subject === "SAINS KOMPUTER"  || subject === "SEJARAH" ){
 
-    fill(subject, fullName, currentClass, true)
+    fill(subject, fullName, currentClass, true);
 
     async function fill(subject, fullName, currentClass, submitForm) {
-        console.log("")
-        console.log("----------------------------------------------")
-        console.log("")
-        console.log("Loading...")
+        console.log("");
+        console.log("----------------------------------------------");
+        console.log("");
+        console.log("Loading...");
 
         try {
         const browser  = await puppeteer.launch({ headless: true, args: ['--no-sandbox'],});
@@ -86,9 +86,9 @@ if(subject === "BAHASA MELAYU" ||  subject === "BAHASA CINA" || subject === "BAH
         await page.goto("https://docs.google.com/forms/d/e/1FAIpQLSeRpuWL1hTLilGH2E5Bz39BuQcZ9qCTHBBauwfmVFkWsok0QA/viewform", {waitUntil: 'networkidle2'})
         const title = await page.$eval("title", el => el.textContent);
 
-        console.log("")
+        console.log("");
         console.log(`Page Title: ${title}`);
-        console.log("")
+        console.log("");
 
         const today = new Date();
         const month = today.getMonth() + 1;
@@ -96,7 +96,7 @@ if(subject === "BAHASA MELAYU" ||  subject === "BAHASA CINA" || subject === "BAH
         const year = today.getFullYear();
         console.log(`Today's date: ${date}/${month}/${year}`);
         console.log("");
-        const time = `${month}${date}${year}`
+        const time = `${month}${date}${year}`;
         await page.focus('.quantumWizTextinputPaperinputInput.exportInput');
         await page.keyboard.type(time);
         await page.waitForTimeout(200);
