@@ -18,6 +18,57 @@ fullName = fullName.toUpperCase()
 currentClass = currentClass.toUpperCase()
 currentForm = currentForm.toUpperCase()
 
+switch (subject){
+    case "BC":
+        subject = "BAHASA CINA";
+        break;
+    case "BM":
+        subject = "BAHASA MELAYU";
+        break;
+    case "BI":
+        subject = "BAHASA INGGERIS";
+        break;
+    case "M":
+        subject = "MATEMATIK";
+        break;
+    case "MT":
+        subject = "MATEMATIK TAMBAHAN";
+        break;
+    case "B":
+        subject = "BIOLOGI";
+        break;
+    case "FIZ":
+        subject = "FIZIK";
+        break;
+    case "KIM":
+        subject = "KIMIA";
+        break;
+    case "PJ":
+        subject = "PENDIDIKAN JASMANI";
+        break;
+    case "BJ":
+        subject = "BAHASA JEPUN";
+        break;
+    case "BT":
+        subject = "BAHASA TAMIL";
+        break;
+    case "KBT":
+        subject = "KESUSASTERAAN BAHASA TAMIL";
+        break;
+    case "SJ":
+        subject = "SEJARAH";
+        break;
+    case "SK":
+        subject = "SAINS KOMPUTER";
+        break;
+    case "PM":
+        subject = "PENDIDIKAN MORAL";
+        break;
+    case "PP":
+        subject = "PRINSIP PERAKAUNAN";
+        break;
+}
+
 if(subject === "PENDIDIKAN JASMANI" || subject === "JASMANI" || subject === "PJ" ) subject = "PENDIDIKAN JASMANI & KESIHATAN"
 if(subject === "BAHASA MELAYU" ||  subject === "BAHASA CINA" || subject === "BAHASA INGGERIS" || subject === "BIOLOGI" || subject === "FIZIK" || subject === "KIMIA" || subject === "BAHASA JEPUN" || subject === "BAHASA TAMIL" || subject === "KESUSASTERAAN BAHASA TAMIL"  || subject === "MATEMATIK"  || subject === "MATEMATIK TAMBAHAN"  || subject === "PENDIDIKAN JASMANI & KESIHATAN"  || subject === "PENDIDIKAN MORAL" || subject === "PRINSIP PERAKAUNAN"  || subject === "SAINS"  || subject === "SAINS KOMPUTER"  || subject === "SEJARAH" ){
 
@@ -30,7 +81,7 @@ if(subject === "BAHASA MELAYU" ||  subject === "BAHASA CINA" || subject === "BAH
         console.log("Loading...")
 
         try {
-        const browser  = await puppeteer.launch({ headless: false, args: ['--no-sandbox'],});
+        const browser  = await puppeteer.launch({ headless: true, args: ['--no-sandbox'],});
         const page = await browser.newPage();
         await page.goto("https://docs.google.com/forms/d/e/1FAIpQLSeRpuWL1hTLilGH2E5Bz39BuQcZ9qCTHBBauwfmVFkWsok0QA/viewform", {waitUntil: 'networkidle2'})
         const title = await page.$eval("title", el => el.textContent);
