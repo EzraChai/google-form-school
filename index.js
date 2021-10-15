@@ -28,13 +28,13 @@ switch (subject){
     case "BI":
         subject = "BAHASA INGGERIS";
         break;
-    case "M":
+    case "MA":
         subject = "MATEMATIK";
         break;
     case "MT":
         subject = "MATEMATIK TAMBAHAN";
         break;
-    case "B":
+    case "BIO":
         subject = "BIOLOGI";
         break;
     case "FIZ":
@@ -44,7 +44,7 @@ switch (subject){
         subject = "KIMIA";
         break;
     case "PJ":
-        subject = "PENDIDIKAN JASMANI";
+        subject = "PENDIDIKAN JASMANI & KESIHATAN";
         break;
     case "BJ":
         subject = "BAHASA JEPUN";
@@ -69,7 +69,7 @@ switch (subject){
         break;
 }
 
-if(subject === "PENDIDIKAN JASMANI" || subject === "JASMANI" || subject === "PJ" ) subject = "PENDIDIKAN JASMANI & KESIHATAN"
+if(subject === "PENDIDIKAN JASMANI" || subject === "JASMANI" ) subject = "PENDIDIKAN JASMANI & KESIHATAN"
 if(subject === "BAHASA MELAYU" ||  subject === "BAHASA CINA" || subject === "BAHASA INGGERIS" || subject === "BIOLOGI" || subject === "FIZIK" || subject === "KIMIA" || subject === "BAHASA JEPUN" || subject === "BAHASA TAMIL" || subject === "KESUSASTERAAN BAHASA TAMIL"  || subject === "MATEMATIK"  || subject === "MATEMATIK TAMBAHAN"  || subject === "PENDIDIKAN JASMANI & KESIHATAN"  || subject === "PENDIDIKAN MORAL" || subject === "PRINSIP PERAKAUNAN"  || subject === "SAINS"  || subject === "SAINS KOMPUTER"  || subject === "SEJARAH" ){
 
     fill(subject, fullName, currentClass, true)
