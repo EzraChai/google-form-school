@@ -28,6 +28,7 @@ npm start
 8. If any error occur, run the command again (most probably your network is slow)
 8. HAVE FUN !!
 
+---
 
 ### Subject
 | Subject's Shortform  | Subject |
