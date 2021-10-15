@@ -11,9 +11,8 @@ let currentForm = "TINGKATAN 4";
 
 //  --------------------------------------------------------------------------------------------------------------
 
-let subject = prompt("What is your current subject (in Malay or in shortform) ?  ");
+let subject = prompt("What is your current subject (in Malay or in shortform) ?  ").toUpperCase().trim();
 
-subject = subject.toUpperCase().trim();
 fullName = fullName.toUpperCase();
 currentClass = currentClass.toUpperCase();
 currentForm = currentForm.toUpperCase();
@@ -83,7 +82,7 @@ if(subject === "BAHASA MELAYU" ||  subject === "BAHASA CINA" || subject === "BAH
         try {
         const browser  = await puppeteer.launch({ headless: true, args: ['--no-sandbox'],});
         const page = await browser.newPage();
-        await page.goto("https://docs.google.com/forms/d/e/1FAIpQLSeRpuWL1hTLilGH2E5Bz39BuQcZ9qCTHBBauwfmVFkWsok0QA/viewform", {waitUntil: 'networkidle2'})
+        await page.goto("https://docs.google.com/forms/d/e/1FAIpQLSeRpuWL1hTLilGH2E5Bz39BuQcZ9qCTHBBauwfmVFkWsok0QA/viewform", {waitUntil: 'networkidle2'});
         const title = await page.$eval("title", el => el.textContent);
 
         console.log("");
