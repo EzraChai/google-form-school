@@ -27,3 +27,23 @@ npm start
 7. The date, subject, form, class, your beautiful name will be showing in the terminal
 8. If any error occur, run the command again (most probably your network is slow)
 8. HAVE FUN !!
+
+
+### Subject
+| Subject's Shortform  | Subject |
+| ------------- | ------------- |
+| "BM"  | "BAHASA MELAYU"  |
+| "BI"  | "BAHASA INGGERIS"  |
+| "BT"  | "BAHASA TAMIL"  |
+| "BJ"  | "BAHASA JEPUN"  |
+| "KBT"  | "KESUSASTERAAN BAHASA TAMIL"  |
+| "MA"  | "MATEMATIK"  |
+| "MT"  | "MATEMATIK TAMBAHAN"  |
+| "FIZ"  | "FIZIK"  |
+| "KIM"  | "KIMIA"  |
+| "SJ"  | "SEJARAH"  |
+| "PJ"  | "PENDIDIKAN JASMANI & KESIHATAN"  |
+| "PM"  | "PENDIDIKAN MORAL"  |
+| "BIO"  | "BIOLOGI"  |
+| "SK"  | "SAINS KOMPUTER"  |
+| "PP"  | "PRINSIP PERAKAUNAN"  |
