@@ -11,7 +11,7 @@ let currentForm = "TINGKATAN 4"
 
 //  --------------------------------------------------------------------------------------------------------------
 
-let subject = prompt("What is your current subject (in Malay) ?  ");
+let subject = prompt("What is your current subject (in Malay or in shortform) ?  ");
 
 subject = subject.toUpperCase().trim()
 fullName = fullName.toUpperCase()
