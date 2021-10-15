@@ -32,18 +32,18 @@ npm start
 ### Subject
 | Subject's Shortform  | Subject |
 | ------------- | ------------- |
-| "BM"  | "BAHASA MELAYU"  |
-| "BI"  | "BAHASA INGGERIS"  |
-| "BT"  | "BAHASA TAMIL"  |
-| "BJ"  | "BAHASA JEPUN"  |
-| "KBT"  | "KESUSASTERAAN BAHASA TAMIL"  |
-| "MA"  | "MATEMATIK"  |
-| "MT"  | "MATEMATIK TAMBAHAN"  |
-| "FIZ"  | "FIZIK"  |
-| "KIM"  | "KIMIA"  |
-| "SJ"  | "SEJARAH"  |
-| "PJ"  | "PENDIDIKAN JASMANI & KESIHATAN"  |
-| "PM"  | "PENDIDIKAN MORAL"  |
-| "BIO"  | "BIOLOGI"  |
-| "SK"  | "SAINS KOMPUTER"  |
-| "PP"  | "PRINSIP PERAKAUNAN"  |
+| BM | BAHASA MELAYU  |
+| BI | BAHASA INGGERIS  |
+| BT | BAHASA TAMIL  |
+| BJ | BAHASA JEPUN  |
+| KBT  | "KESUSASTERAAN BAHASA TAMIL  |
+| MA | MATEMATIK  |
+| MT | MATEMATIK TAMBAHAN  |
+| FIZ  | FIZIK  |
+| KIM  | KIMIA  |
+| SJ | SEJARAH  |
+| PJ | PENDIDIKAN JASMANI & KESIHATAN  |
+| PM | PENDIDIKAN MORAL  |
+| BIO  | BIOLOGI  |
+| SK | SAINS KOMPUTER  |
+| PP | PRINSIP PERAKAUNAN  |
